@@ -33,7 +33,7 @@ print("Tage im Jahr: " + einString)	# ohne Umwandlung in string gäbe es eine Fe
 # string in int umwandeln
 einString = "200"			# string
 eineZahl = int(einString)		# int
-eineZahl = int(“irgendetwas)	# error
+eineZahl = int("irgendetwas")	# error
 
 
 # Strings
