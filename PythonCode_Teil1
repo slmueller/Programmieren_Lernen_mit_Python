@@ -28,24 +28,24 @@ x = x + 1	# => 6
 # int in string umwandeln
 eineZahl = 356	# int
 einString = str(eineZahl)	# string
-print(“Tage im Jahr: “ + einString)	# ohne Umwandlung in string gäbe es eine Fehlermeldung
+print("Tage im Jahr: " + einString)	# ohne Umwandlung in string gäbe es eine Fehlermeldung
 
 # string in int umwandeln
-einString = “200”			# string
+einString = "200"			# string
 eineZahl = int(einString)		# int
 eineZahl = int(“irgendetwas)	# error
 
 
 # Strings
 # Probiere das direkt in der Konsole aus
-name = “Elsa”
+name = "Elsa"
 len(name)		# Länge = 4 Buchstaben
 name[0]			# index, 1. Position = 0, => E
 name[1]			# => l
 name[1:2]		# Abschnitt Position 1 – 2 => ls
 
 # Zusammensetzen:
-info = “ aus Frozen”
+info = " aus Frozen"
 zusammengesetzt = name + info	# => Elsa aus Frozen
 print(zusammengesetzt)
 
@@ -66,7 +66,7 @@ print('Deine Zahl hoch zwei ist: ' +  str(eineZahl))	# konvertiere zurück in ei
 
 # Liste
 zahlen = [4, 5, 6]					# Liste mit 3 Zahlen
-namen = [“Andrea”, “Laura”, “Stefan”, “Andrea”]		# Elemente können mehrmals vorkommen
+namen = ["Andrea", "Laura", "Stefan", "Andrea"]		# Elemente können mehrmals vorkommen
 erinnern = ["Abo bezahlen Juni", 12345, "Passwort1", [101, 853, 250]]; 	# kann unterschiedliche Datentypen enthalten, sogar eine Liste innerhalb der Liste
 #Liste = Safe-Kombination mit 3 Zahlen
 print(erinnern)
@@ -75,11 +75,11 @@ print(erinnern)
 li = []	# leere Liste
 
 # append – ans Ende der Liste anhängen
-li.append(“Apfel”)
-li.append(“Trauben”)
-li.append(“Birne”)
-li.append(“Banane”)
-li.append(“Kiwi”)
+li.append("Apfel")
+li.append("Trauben")
+li.append("Birne")
+li.append("Banane")
+li.append("Kiwi")
 print(li)
 
 # Ein Element auswählen: Index beginnt bei 0
@@ -91,7 +91,7 @@ li[-1]  				# letztes Element => Birne
 li[1:2]   				# Abschnitt => [Trauben, Birne]
 
 # Element an einer bestimmten Stelle einfügen
-li.insert(0, “Ananas”)  # => [Ananas, Apfel, Trauben, Birne]
+li.insert(0, "Ananas")  # => [Ananas, Apfel, Trauben, Birne]
 print(li)
 
 # Sachen aus dem Korb nehmen:
@@ -100,7 +100,7 @@ li.pop()		# Kiwi essen => [Ananas, Apfel, Trauben, Birne, Banane]
 print(li)
 banana = li.pop()	# Banane für später aufheben => [Ananas, Apfel, Trauben, Birne]
 del li[0]  		# Element an Position 0 wegnehmen => [Apfel, Trauben, Birne]
-li.remove(“Trauben”)  	# das Element löschen wenn es das erste Mal vorkommt
+li.remove("Trauben")  	# das Element löschen wenn es das erste Mal vorkommt
 print(li)
 
 li.sort()		# liste alpha-numerisch sortieren, funktioniert nur wenn alle Elemente den gleichen Datentyp haben
@@ -124,11 +124,11 @@ del telefonbuch["Heinz"]  						# Eintrag löschen
 # Einträge abrufen
 # ein Dictionare ist ungeordnet! telefonbuch[1] funktioniert nicht.
 telNr = telefonbuch["Laura"]			# Einträge werden über ihre Keys abgerufen
-telefonbuch[“Andrea] = "0448566666"		# Wert ändern
-telefonbuch[“Elefant”]				# Error
+telefonbuch["Andrea"] = "0448566666"		# Wert ändern
+telefonbuch["Elefant"]				# Error
 "Elefant" in telefonbuch  			# Schauen ob Elefant im Telefonbuch => False
 telefonbuch.get("Andrea")      
-telefonbuch.get(“Elefant”)			# None --> kein Error!
+telefonbuch.get("Elefant")			# None --> kein Error!
 
 # Alle Keys / Values auf einmal
 print(telefonbuch.keys())			# alle Namen
