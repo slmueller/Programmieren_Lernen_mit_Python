@@ -65,8 +65,8 @@ print('Deine Zahl hoch zwei ist: ' +  str(eineZahl))	# konvertiere zurück in ei
 
 
 # Liste
-zahlen = [4, 5, 6]														# Liste mit 3 Zahlen
-namen = [“Andrea”, “Laura”, “Stefan”, “Andrea”]							# Elemente können mehrmals vorkommen
+zahlen = [4, 5, 6]					# Liste mit 3 Zahlen
+namen = [“Andrea”, “Laura”, “Stefan”, “Andrea”]		# Elemente können mehrmals vorkommen
 erinnern = ["Abo bezahlen Juni", 12345, "Passwort1", [101, 853, 250]]; 	# kann unterschiedliche Datentypen enthalten, sogar eine Liste innerhalb der Liste
 #Liste = Safe-Kombination mit 3 Zahlen
 print(erinnern)
@@ -96,17 +96,17 @@ print(li)
 
 # Sachen aus dem Korb nehmen:
 # pop – Element vom Ende wegnehmen
-li.pop()				# Kiwi essen => [Ananas, Apfel, Trauben, Birne, Banane]
+li.pop()		# Kiwi essen => [Ananas, Apfel, Trauben, Birne, Banane]
 print(li)
-banana = li.pop()		# Banane für später aufheben => [Ananas, Apfel, Trauben, Birne]
-del li[0]  				# Element an Position 0 wegnehmen => [Apfel, Trauben, Birne]
+banana = li.pop()	# Banane für später aufheben => [Ananas, Apfel, Trauben, Birne]
+del li[0]  		# Element an Position 0 wegnehmen => [Apfel, Trauben, Birne]
 li.remove(“Trauben”)  	# das Element löschen wenn es das erste Mal vorkommt
 print(li)
 
-li.sort()				# liste alpha-numerisch sortieren, funktioniert nur wenn alle Elemente den gleichen Datentyp haben
+li.sort()		# liste alpha-numerisch sortieren, funktioniert nur wenn alle Elemente den gleichen Datentyp haben
 
-li2 = li[:]  			# neue Kopie der Liste machen
-						# li2 = li, würde dazu führen, dass beide Variablen zur selben Liste zeigen. D.h. wenn li verändert wird, so ändert auch li2
+li2 = li[:]  		# neue Kopie der Liste machen
+			# li2 = li, würde dazu führen, dass beide Variablen zur selben Liste zeigen. D.h. wenn li verändert wird, so ändert auch li2
 
 
 
@@ -114,24 +114,24 @@ li2 = li[:]  			# neue Kopie der Liste machen
 # immer testen via print(telefonbuch)
 telefonbuch = {}
 telefonbuch = {"Andrea": "079 876 54 32", "Laura": "044 765 34 23"}	# Keys müssen einzigartig sein
-#Nummern müssen Strings sein da sie in Python 3.6 sonst falsch als octal literal  Datentyp erkannt werden.
-telefonbuch["Heinz"] = "079 892 23 09"								# Element hinzufügen
+# Nummern müssen Strings sein da sie in Python 3.6 sonst falsch als octal literal  Datentyp erkannt werden.
+telefonbuch["Heinz"] = "079 892 23 09"					# Element hinzufügen
 print(telefonbuch)
 telefonbuch["Heinz"] = ["Meier", "Bahnhofstrasse 9", "Dübendorf"]	# Werte können unterschiedliche Datentypen sein, z.B. eine Liste
-del telefonbuch["Heinz"]  											# Eintrag löschen
+del telefonbuch["Heinz"]  						# Eintrag löschen
 
 
 # Einträge abrufen
 # ein Dictionare ist ungeordnet! telefonbuch[1] funktioniert nicht.
 telNr = telefonbuch["Laura"]			# Einträge werden über ihre Keys abgerufen
 telefonbuch[“Andrea] = "0448566666"		# Wert ändern
-telefonbuch[“Elefant”]					# Error
-"Elefant" in telefonbuch  				# Schauen ob Elefant im Telefonbuch => False
+telefonbuch[“Elefant”]				# Error
+"Elefant" in telefonbuch  			# Schauen ob Elefant im Telefonbuch => False
 telefonbuch.get("Andrea")      
-telefonbuch.get(“Elefant”)				# None --> kein Error!
+telefonbuch.get(“Elefant”)			# None --> kein Error!
 
 # Alle Keys / Values auf einmal
-print(telefonbuch.keys())				# alle Namen
-print(telefonbuch.values())				# alle Nummern
+print(telefonbuch.keys())			# alle Namen
+print(telefonbuch.values())			# alle Nummern
 # Einträge in keys und values haben nicht zwingend dieselbe Reihenfolge
 
