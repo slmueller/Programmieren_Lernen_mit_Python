@@ -1,0 +1,137 @@
+# Hello world!
+print("Hello, world")	
+
+# Rechner
+6+2
+6-2
+6*2
+6/2
+7/2
+
+# Variablen
+pi = 3.1415926				# Wert ist als pi gespeichert
+2 * pi * 5					# Jedes Mal wenn wir den Wert wieder brauchen rufen wir pi auf
+kreisumfang = 2 * pi * 5	# Wir können das Resultat einer Berechnung ebenfalls als Variable speichern
+
+# Wir können mehrere Variablen kombinieren
+a = 5
+b = 3
+c = a + b
+
+#  Wir können auch den Wert von x verändern:
+x = 5
+x = x + 1	# => 6
+
+
+# Datentypen & Umwandlungen
+
+# int in string umwandeln
+eineZahl = 356	# int
+einString = str(eineZahl)	# string
+print(“Tage im Jahr: “ + einString)	# ohne Umwandlung in string gäbe es eine Fehlermeldung
+
+# string in int umwandeln
+einString = “200”			# string
+eineZahl = int(einString)		# int
+eineZahl = int(“irgendetwas)	# error
+
+
+# Strings
+# Probiere das direkt in der Konsole aus
+name = “Elsa”
+len(name)		# Länge = 4 Buchstaben
+name[0]			# index, 1. Position = 0, => E
+name[1]			# => l
+name[1:2]		# Abschnitt Position 1 – 2 => ls
+
+# Zusammensetzen:
+info = “ aus Frozen”
+zusammengesetzt = name + info	# => Elsa aus Frozen
+print(zusammengesetzt)
+
+print(name * 3)	# Multiplikation vervielfacht den string => ElsaElsaElsa
+
+
+# Input aus Konsole:
+userZahl = input('Tippe eine Zahl ein: ')	
+# Der Prompt ist jetzt >>>Tippe eine Zahl ein: .
+# Sobald der User etwas eintippt wird das als string in userZahl gespeichert
+
+# Wir möchten dem User die Zahl hoch zwei zurückgeben:
+eineZahl = int(userZahl)	# konvertiere den string in eine Zahl
+eineZahl = eineZahl**2 	# hoch zwei
+print('Deine Zahl hoch zwei ist: ' +  str(eineZahl))	# konvertiere zurück in einen string und zeige das Resultat an
+
+
+
+# Liste
+zahlen = [4, 5, 6]														# Liste mit 3 Zahlen
+namen = [“Andrea”, “Laura”, “Stefan”, “Andrea”]							# Elemente können mehrmals vorkommen
+erinnern = ["Abo bezahlen Juni", 12345, "Passwort1", [101, 853, 250]]; 	# kann unterschiedliche Datentypen enthalten, sogar eine Liste innerhalb der Liste
+#Liste = Safe-Kombination mit 3 Zahlen
+print(erinnern)
+
+# Beispiel: Früchtekorb
+li = []	# leere Liste
+
+# append – ans Ende der Liste anhängen
+li.append(“Apfel”)
+li.append(“Trauben”)
+li.append(“Birne”)
+li.append(“Banane”)
+li.append(“Kiwi”)
+print(li)
+
+# Ein Element auswählen: Index beginnt bei 0
+# [Apfel, Trauben, Birne]
+# Probier das direkt in der Konsole aus
+li[0]   				# => Apfel, print(li[0])
+li[1]	 				# => Trauben
+li[-1]  				# letztes Element => Birne
+li[1:2]   				# Abschnitt => [Trauben, Birne]
+
+# Element an einer bestimmten Stelle einfügen
+li.insert(0, “Ananas”)  # => [Ananas, Apfel, Trauben, Birne]
+print(li)
+
+# Sachen aus dem Korb nehmen:
+# pop – Element vom Ende wegnehmen
+li.pop()				# Kiwi essen => [Ananas, Apfel, Trauben, Birne, Banane]
+print(li)
+banana = li.pop()		# Banane für später aufheben => [Ananas, Apfel, Trauben, Birne]
+del li[0]  				# Element an Position 0 wegnehmen => [Apfel, Trauben, Birne]
+li.remove(“Trauben”)  	# das Element löschen wenn es das erste Mal vorkommt
+print(li)
+
+li.sort()				# liste alpha-numerisch sortieren, funktioniert nur wenn alle Elemente den gleichen Datentyp haben
+
+li2 = li[:]  			# neue Kopie der Liste machen
+						# li2 = li, würde dazu führen, dass beide Variablen zur selben Liste zeigen. D.h. wenn li verändert wird, so ändert auch li2
+
+
+
+# Dictionary: wie ein Wörterbuch, 1 Wort (Key) – 1 Definition (Value)
+# immer testen via print(telefonbuch)
+telefonbuch = {}
+telefonbuch = {"Andrea": "079 876 54 32", "Laura": "044 765 34 23"}	# Keys müssen einzigartig sein
+#Nummern müssen Strings sein da sie in Python 3.6 sonst falsch als octal literal  Datentyp erkannt werden.
+telefonbuch["Heinz"] = "079 892 23 09"								# Element hinzufügen
+print(telefonbuch)
+telefonbuch["Heinz"] = ["Meier", "Bahnhofstrasse 9", "Dübendorf"]	# Werte können unterschiedliche Datentypen sein, z.B. eine Liste
+del telefonbuch["Heinz"]  											# Eintrag löschen
+
+
+# Einträge abrufen
+# ein Dictionare ist ungeordnet! telefonbuch[1] funktioniert nicht.
+telNr = telefonbuch["Laura"]			# Einträge werden über ihre Keys abgerufen
+telefonbuch[“Andrea] = "0448566666"		# Wert ändern
+telefonbuch[“Elefant”]					# Error
+"Elefant" in telefonbuch  				# Schauen ob Elefant im Telefonbuch => False
+telefonbuch.get("Andrea")      
+telefonbuch.get(“Elefant”)				# None --> kein Error!
+
+# Alle Keys / Values auf einmal
+print(telefonbuch.keys())				# alle Namen
+print(telefonbuch.values())				# alle Nummern
+# Einträge in keys und values haben nicht zwingend dieselbe Reihenfolge
+
